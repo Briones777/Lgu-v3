@@ -22,3 +22,13 @@ const drawer=document.getElementById('drawer');
 document.getElementById('hamBtn').addEventListener('click',()=>drawer.classList.add('open'));
 document.getElementById('drawerClose').addEventListener('click',()=>drawer.classList.remove('open'));
 function closeDrawer(){drawer.classList.remove('open')}
+
+const header = document.querySelector("header");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 60) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
