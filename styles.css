@@ -121,10 +121,17 @@ header.scrolled{
   box-shadow:0 4px 40px rgba(0,0,0,.8),0 0 0 1px var(--border-g);
 }
 nav{
+  flex-wrap: nowrap;
+  gap: 12px;
   max-width:1280px;margin:0 auto;padding:0 28px;
   display:flex;align-items:center;justify-content:space-between;height:68px;
 }
-.brand{display:flex;align-items:center;gap:14px}
+.brand{ display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  flex-shrink: 1;}
+
 .brand-logo{
   position:relative;width:44px;height:44px;flex-shrink:0;
 }
@@ -136,6 +143,8 @@ nav{
   box-shadow:0 0 0 2px var(--dark-1),0 0 0 4px var(--g-700),var(--glow-g);
 }
 .brand-copy h1{
+    min-width: 0;
+  overflow: hidden;
   font-family:var(--font-disp);font-size:.98rem;font-weight:400;
   color:#fff;line-height:1.1;letter-spacing:.01em;
 }
@@ -143,7 +152,7 @@ nav{
   font-size:.62rem;font-weight:600;letter-spacing:.12em;
   text-transform:uppercase;color:var(--g-400);margin-top:1px;
 }
-.nav-menu{display:flex;align-items:center;gap:2px;list-style:none}
+.nav-menu{display:flex;align-items:center;gap:2px;list-style:none; flex-shrink: 0;}
 .nav-menu a{
   display:block;padding:7px 13px;font-size:.78rem;font-weight:600;
   letter-spacing:.04em;text-transform:uppercase;color:var(--n-400);
